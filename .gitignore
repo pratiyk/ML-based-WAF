@@ -1,1 +1,4 @@
-.venv
+*.venv
+*.gz
+*.log
+*.1
