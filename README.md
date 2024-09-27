@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 import joblib
 
 # Load the combined dataset
-data = pd.read_csv('combined_parsed_data.csv')
+data = pd.read_csv('combined_parsed_requests.csv')
 
 # Sample a smaller subset of the data
 data = data.sample(frac=0.1, random_state=42)  # Use 10% of the dataset
