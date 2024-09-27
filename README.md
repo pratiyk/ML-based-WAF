@@ -118,11 +118,12 @@ model = RandomForestClassifier(random_state=42)
 
 # Adjusted hyperparameter tuning using GridSearchCV
 param_grid = {
-    'n_estimators': [100],  # Reduced number of estimators
-    'max_depth': [None, 10],  # Limited options
-    'min_samples_split': [2, 5],
-    'min_samples_leaf': [1],
-    'max_features': ['sqrt', 'log2']  # Use valid options
+    'n_estimators': [200, 300],  # Increased number of estimators
+    'max_depth': [None, 10, 15, 20],  # More options for max_depth
+    'min_samples_split': [2, 5, 10],  # Include higher values
+    'min_samples_leaf': [1, 2],  # Include higher values
+    'max_features': ['sqrt', 'log2', 0.5, 0.6],  # Fraction of features
+    'class_weight': ['balanced', None]  # Consider class weights
 }
 
 # Perform GridSearchCV to find the best hyperparameters
