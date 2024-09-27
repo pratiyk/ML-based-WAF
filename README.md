@@ -16,9 +16,9 @@ data = pd.read_csv('combined_parsed_data.csv')
 data = data.sample(frac=0.1, random_state=42)  # Use 10% of the dataset
 
 # Define features and target
-feature_columns = data.columns.drop('Source')
+feature_columns = data.columns.drop('request_type')
 X = data[feature_columns]
-y = data['Source']
+y = data['request_type']
 
 # One-hot encode categorical features
 X_encoded = pd.get_dummies(X, drop_first=True)
